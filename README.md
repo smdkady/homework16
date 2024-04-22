@@ -1,1 +1,2 @@
 [![Java CI with Gradle](https://github.com/smdkady/homework16/actions/workflows/gradle.yml/badge.svg)](https://github.com/smdkady/homework16/actions/workflows/gradle.yml)
+[![Build status](https://ci.appveyor.com/api/projects/status/18wat6ni3lraqcbs?svg=true)](https://ci.appveyor.com/project/smdkady/homework16)
