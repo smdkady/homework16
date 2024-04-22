@@ -11,14 +11,14 @@ import java.time.format.DateTimeFormatter;
 
 public class CardTest {
     private String generateDate(int addDays, String pattern) {
-        return LocalDate.now().format(DateTimeFormatter.ofPattern(pattern));
+        return LocalDate.now().plusDays(addDays).format(DateTimeFormatter.ofPattern(pattern));
     }
 
     @Test
     public void shouldBeSuccessful() {
         Selenide.open("http://localhost:9999");
         Selenide.$("[data-test-id='city'] input").setValue("Пенза");
-        String planningDate = generateDate(4, "22.09.2024");
+        String planningDate = generateDate(4, "dd.MM.yyyy");
         Selenide.$("[data-test-id='date'] input").sendKeys(Keys.chord(Keys.SHIFT, Keys.HOME), Keys.DELETE);
         Selenide.$("[data-test-id='date'] input").setValue(planningDate);
         Selenide.$("[data-test-id='name'] input").setValue("Мамин-Сибиряк Дмитрий");
